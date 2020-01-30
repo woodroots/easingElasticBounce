@@ -1,4 +1,16 @@
+/*
+mathsass from
+https://terkel.jp/archives/2013/04/mathsass/
+Thanks!
+*/
+
 @import "mathsass/math";
+
+/*
+Original From jQuery Easing Plugin
+https://gsgd.co.uk/sandbox/jquery/easing/
+Thanks!!
+*/
 
 @function easeInElastic($t, $b, $c, $d) {
     $s: 1.70158;
