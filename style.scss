@@ -1,0 +1,220 @@
+@import "bounceEasing";
+
+/* 基本設定 */
+.module {
+    border: 4px solid #ddd;
+    padding: 20px;
+    height: 300px;
+    margin-bottom: 60px;
+
+    .item {
+        width: 50px;
+        height: 50px;
+        background: #f33;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* 使用例 */
+.easing1 {
+    animation: easing1 2s linear forwards;
+}
+
+@keyframes easing1 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeInElastic($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
+
+
+
+
+
+.easing2 {
+    animation: easing2 2s linear forwards;
+}
+
+@keyframes easing2 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeOutElastic($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
+
+
+
+
+
+
+.easing3 {
+    animation: easing3 2s linear forwards;
+}
+
+@keyframes easing3 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeInOutElastic($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
+
+
+
+
+
+.easing4 {
+    animation: easing4 2s linear forwards;
+}
+
+@keyframes easing4 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeOutBounce($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
+
+
+
+.easing5 {
+    animation: easing5 2s linear forwards;
+}
+
+@keyframes easing5 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeInBounce($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
+
+.easing6 {
+    animation: easing6 2s linear forwards;
+}
+
+@keyframes easing6 {
+    /* ここから */
+    $start: 0; //開始
+    $end: 400; //終了
+    $startp: 0; //開始%
+    $endp: 100; //終了%
+    $step: 20; //分割数
+
+    $i: 0;
+    $c: $end - $start;
+
+    @while $i <=$step {
+        $t: (($endp - $startp) / $step / 100) * $i;
+        $d: ($endp - $startp) / 100;
+        $percent: $startp + (($endp - $startp) / $step) * $i;
+
+        #{$percent *1%} {
+            //ここにプロパティを書く
+            transform: translateX(round(easeInOutBounce($t, $start, $c, $d) * 100) / 100 * 1px);
+        }
+
+        $i: $i+1;
+    }
+
+    /* ここまで */
+}
